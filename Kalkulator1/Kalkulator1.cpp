@@ -1,20 +1,100 @@
-// Kalkulator1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-
-int main()
+using System;
+namespace HelloWorld
 {
-    std::cout << "Hello World!\n";
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Console.Title = "Aplikasi Kalkulator";
+            Console.WriteLine("Pilih Menu Kalkulator");
+            Console.WriteLine(" ");
+            Console.WriteLine("1. Penambahan");
+            Console.WriteLine("2. Pengurangan");
+            Console.WriteLine("3. Perkalian");
+            Console.WriteLine("4. Pembagian");
+            Console.WriteLine(" ");
+            Console.WriteLine("Input nomor menu (1-4) : ");
+            int MenuKalkulator = Convert.ToInt32(Console.ReadLine());
+            if(MenuKalkulator == 1)
+            {
+                MenuKalkulatorPenambahan();
+            }
+            else if(MenuKalkulator == 2)
+            {
+                MenuKalkulatorPengurangan();
+            }
+            else if(MenuKalkulator == 3)
+            {
+                MenuKalkulatorPerkalian();
+            }
+            else if(MenuKalkulator == 4)
+            {
+                MenuKalkulatorPembagian();
+            }
+            else
+            {
+                Console.WriteLine("Maaf, Menu yang anda pilih tidak tersedia");
+                Console.WriteLine("");
+                Console.WriteLine("Tekan sembarang tombol untuk keluar");
+                Console.ReadKey();
+            }
+            
+        }
+        static void MenuKalkulatorPenambahan()
+        {
+          Console.WriteLine("Inputkan nilai a = ");
+          int a = int.Parse(Console.ReadLine());
+          Console.WriteLine("Inputkan nilai b = ");
+          int b = int.Parse(Console.ReadLine());
+          Console.WriteLine("Hasil Penambahan " + a + " + " + b + " = " + Penambahan(a, b));
+                          Console.WriteLine("Tekan sembarang tombol untuk keluar");
+                Console.ReadKey();
+        }
+        static int Penambahan(int a, int b)
+        {
+            return a + b;
+        }
+        static void MenuKalkulatorPengurangan()
+        {
+          Console.WriteLine("Inputkan nilai a = ");
+          int a = int.Parse(Console.ReadLine());
+          Console.WriteLine("Inputkan nilai b = ");
+          int b = int.Parse(Console.ReadLine());
+          Console.WriteLine("Hasil Pengurangan " + a + " - " + b + " = " + Pengurangan (a, b));
+                          Console.WriteLine("Tekan sembarang tombol untuk keluar");
+                Console.ReadKey();
+        }
+        static int Pengurangan(int a, int b)
+        {
+            return a - b;
+        }
+        static void MenuKalkulatorPerkalian()
+        {
+          Console.WriteLine("Inputkan nilai a = ");
+          int a = int.Parse(Console.ReadLine());
+          Console.WriteLine("Inputkan nilai b = ");
+          int b = int.Parse(Console.ReadLine());
+          Console.WriteLine("Hasil Perkalian " + a + " * " + b + " = " + Perkalian(a, b));
+                          Console.WriteLine("Tekan sembarang tombol untuk keluar");
+                Console.ReadKey();
+        }
+        static int Perkalian(int a, int b)
+        {
+            return a * b;
+        }
+        static void MenuKalkulatorPembagian()
+        {
+          Console.WriteLine("Inputkan nilai a = ");
+          int a = int.Parse(Console.ReadLine());
+          Console.WriteLine("Inputkan nilai b = ");
+          int b = int.Parse(Console.ReadLine());
+          Console.WriteLine("Hasil Pembagian " + a + " / " + b + " = " + Pembagian(a, b));
+                          Console.WriteLine("Tekan sembarang tombol untuk keluar");
+                Console.ReadKey();
+        }
+        static int Pembagian(int a, int b)
+        {
+            return a / b;
+        }
+    }
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
